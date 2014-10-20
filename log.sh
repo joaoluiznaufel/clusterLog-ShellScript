@@ -1,5 +1,12 @@
 #!/bin/bash
+#
 #Develop by Joao Luiz Naufel
+#
+# mount on  //<server_ip>/joao    /cluster/log    cifs    username=joao,password=jhonny,uid=0,iocharset=utf8      0        0
+#
+# or use sshfs root@xxx.xxx.xxx.xxx:/ /cluster/log
+#
+
 
 
 clusterLog="cluster/log"
@@ -14,7 +21,6 @@ logEnter() {
 }
 
 Write() {
-	way=$(RandServer)/"$1"
 
 	if [ -e ${array[1]}"/"$1 ] || [ -e ${array[2]}"/"$1 ] || [ -e ${array[3]}"/"$1 ];
 	then
@@ -31,6 +37,7 @@ Write() {
 			echo "$2" >> "${array[3]}"/"$1"
 		fi	
 	else 	
+		way=$(RandServer)/"$1"
 		echo "$2" >> "$way"
 	fi
 }
