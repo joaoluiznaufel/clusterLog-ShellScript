@@ -1,8 +1,9 @@
 #!/bin/bash
 #
 #Develop by Joao Luiz Naufel
+#<joaoluiznaufel@gmail.com>
 #
-# mount on  //<server_ip>/joao    /cluster/log    cifs    username=joao,password=jhonny,uid=0,iocharset=utf8      0        0
+# mount on fstab file //<server_ip>/joao    /cluster/log    cifs    username=joao,password=jhonny,uid=0,iocharset=utf8      0        0
 #
 # or use sshfs root@xxx.xxx.xxx.xxx:/ /cluster/log
 #
